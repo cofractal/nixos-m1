@@ -57,7 +57,7 @@ jobs:
 
       - name: build installer
         run: |
-          nix-build -A installer-bootstrap-cross -j2
+          nix-build -A installer-bootstrap-cross -j48
           cp result/iso/*.iso nixos-22.11pre-m1-${{ github.ref_name }}.iso
 
       - uses: actions/upload-artifact@v3
